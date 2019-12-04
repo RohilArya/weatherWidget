@@ -36,11 +36,13 @@ public class weatherWidget {
         cityName = city.nextLine();
       }
       //if the number or args are 1 or 2 break out of loop
-      //if the number of args is 2 (city, country)
-      //if the number of args is 3 (city, state, country)
+      //if the number of args is 1 (city, country)
+      //if the number of args is 2 (city, state, country)
+      //number of args counts the number of commas in the input
       else
       {
         System.out.println("Correct Format");
+        //if user only input city and country
         if(numberOfArgs == 1)
         {
           for(int i = 0; i < cityName.length(); i ++)
@@ -59,6 +61,7 @@ public class weatherWidget {
         }
         else
         {
+          //if user put in city country and state/province
           int commaCounter = 0;
           for(int i = 0; i < cityName.length(); i ++)
           {
