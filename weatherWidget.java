@@ -3,6 +3,26 @@ public class weatherWidget {
   public static void main(String[] args) {
     //variables
     String cityName;
+    
+    
+    //getting user input
+    Scanner city = new Scanner(System.in);
+    System.out.println("Enter your city and country (City,Country or City, Province/State, Country)");
+    cityName = city.nextLine();
+    
+    String[] location = validateArguement(cityName);
+    
+    location loc = new location(location[0],location[1],location[2]);
+    
+    //System.
+    
+    
+    
+  }
+  
+  public static String[] validateArguement(String cityName)
+  {
+    String [] location = new String [3];
     int numberOfArgs = 0;
     char comma = ',';
     String token = "";
@@ -10,10 +30,7 @@ public class weatherWidget {
     String countryToken = "";
     String stateToken = "";
     
-    //getting user input
     Scanner city = new Scanner(System.in);
-    System.out.println("Enter your city and country (City,Country or City, Province/State, Country)");
-    cityName = city.nextLine();
     
     //checking for valid number of arguements
     while (numberOfArgs >= 0)
@@ -42,7 +59,6 @@ public class weatherWidget {
       else
       {
         System.out.println("Correct Format");
-        //if user only input city and country
         if(numberOfArgs == 1)
         {
           for(int i = 0; i < cityName.length(); i ++)
@@ -89,9 +105,17 @@ public class weatherWidget {
           countryToken = token;
         }
         System.out.println("City token is : " + cityToken + " Country token is: " + countryToken + " State/Province token is :" + stateToken);
+        location[0] = cityToken;
+        location[1] = stateToken;
+        location[2] = countryToken;
+        
+        for(int i = 0; i < 3; i++)
+        {
+          System.out.println(location[i]);
+        }
         break;
       }
     }
-    
+    return location;
   }
 }
