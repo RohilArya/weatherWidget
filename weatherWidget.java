@@ -14,8 +14,8 @@ public class weatherWidget {
     
     location loc = new location(location[0],location[1],location[2]);
     
-    //System.
-    
+    System.out.println(loc.getCity() + " " + loc.getCountry())
+;
     
     
   }

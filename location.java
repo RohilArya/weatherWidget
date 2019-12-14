@@ -21,8 +21,27 @@ public class location {
   
   public String getCity()
   {
-    return this.sity;
+    return this.city;
+  }
+  public void setCity(String city)
+  {
+    this.city = city;
   }
   
-  public String getStateOrProvince
+  public String getStateOrProvince()
+  {
+    return this.stateOrProvince;
+  }
+  public void setStateOrProvince(String stateOrProvince)
+  {
+    this.stateOrProvince = stateOrProvince;
+  }
+  public String getCountry()
+  {
+    return this.country;
+  }
+  public void setCountry(String country)
+  {
+    this.country = country;
+  }
 }
